@@ -6,7 +6,8 @@
   "license": "ISC",
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "build-win": "set NODE_ENV=production & \"node_modules/.bin/webpack\" -p --progress --colors"
+    "build-win": "set NODE_ENV=production & \"node_modules/.bin/webpack\" -p --progress --colors",
+    "lint":"eslint app/*.js component/*.js"
   },
   "devDependencies": {
     "babel-core": "~6.7.*",
