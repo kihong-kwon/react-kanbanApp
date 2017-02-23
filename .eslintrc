@@ -1,7 +1,7 @@
 {
     "env": {
         "node" : true,
-        "browser" : true
+        "es6" : true
     },
     "ecmaFeatures" : {
         "jsx" : true,
@@ -13,15 +13,16 @@
     "parser":"babel-eslint",
     "rules": {
         "react/display-name" : 1,
-        "semi" : [2, "never"],
+        "semi" : ["error", "always"],
         "strict" : 0,
         "key-spacing" : [2, {
-            "beforeColon" : true,
+            "beforeColon" : false,
             "afterColon" : true
         }],
-        "no-unused-vars" : [1, {
-            "vars" : "all",
-            "args" : "after-used"
-        }]
+        "react/jsx-uses-vars" : 1,
+        "indent" : [
+            "error",
+            4
+        ]
     }
 }

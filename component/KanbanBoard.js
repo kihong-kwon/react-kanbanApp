@@ -12,7 +12,7 @@ class KanbanBoard extends Component {
                 <List id="done" title="Done" cards={
                     this.props.cards.filter((card) => card.status === "done")}/>
             </div>
-        )
+        );
     }
 }
 
