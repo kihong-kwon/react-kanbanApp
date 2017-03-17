@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --progress",
     "build-win": "set NODE_ENV=production & \"node_modules/.bin/webpack\" -p --progress --colors",
     "build-mac": "NODE_ENV=production webpack -p --progress --colors",
-    "lint":"eslint app/*.js component/*.js"
+    "lint": "eslint app/*.js component/*.js"
   },
   "devDependencies": {
     "babel-core": "~6.7.*",
@@ -23,7 +23,13 @@
     "webpack-dev-server": "~1.14.*"
   },
   "dependencies": {
+    "marked": "^0.3.6",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-update": "^15.4.2",
+    "react-dnd": "^2.2.4",
+    "react-dnd-html5-backend": "^1.0.0",
+    "react-dom": "^15.0.0",
+    "whatwg-fetch": "^2.0.2"
   }
 }
