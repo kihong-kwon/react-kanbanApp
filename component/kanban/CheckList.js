@@ -5,14 +5,14 @@ class CheckList extends Component {
     checkInputKeyPress(evt) {
         if(evt.key === 'Enter') {
             this.props.taskCallbacks.add(this.props.cardId, evt.target.value);
-                evt.target.value = '';
+            evt.target.value = '';
         }
     }
 
     render() {
         let tasks = this.props.tasks.map((task, taskIndex) => (
             <li key={task.id} className="checkList__task">
-                <input type="checkbox" defaultChecked={task.done} onChange={
+                <input type="checkbox" checked={task.done} onChange={
                     this.props.taskCallbacks.toggle.bind(null, this.props.cardId,
                     task.id, taskIndex)}/>
                 {task.name}{' '}
@@ -36,8 +36,8 @@ class CheckList extends Component {
 
 CheckList.PropTypes = {
     cardId: PropTypes.number,
-    taskCallbacks: PropTypes.object,
-    tasks: PropTypes.arrayOf(PropTypes.object)
+    tasks: PropTypes.array,
+    taskCallbacks: PropTypes.object
 };
 
 export default CheckList;

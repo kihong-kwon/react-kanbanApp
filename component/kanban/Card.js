@@ -19,7 +19,7 @@ class Card extends Component {
 
         if (this.state.showDetails) {
             cardDetails = (
-                <div className="card_details">
+                <div className="card__details">
                     <span dangerouslySetInnerHTML={{__html: marked(this.props.description)}} />
                     <CheckList cardId={this.props.id}
                                tasks={this.props.tasks}
@@ -29,7 +29,7 @@ class Card extends Component {
         }
 
         let sideColor = {
-            positon: 'absolute',
+            position: 'absolute',
             zIndex: -1,
             top: 0,
             bottom: 0,
@@ -58,7 +58,7 @@ Card.PropTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     color: PropTypes.string,
-    tasks: PropTypes.arrayOf(PropTypes.object),
+    tasks: PropTypes.array,
     taskCallbacks: PropTypes.object
 };
 

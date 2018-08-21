@@ -79,6 +79,28 @@ ul {
   content: '▾';
 }
 
+.toggle-enter {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.toggle-enter.toggle-enter-active {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height .25s ease-in;
+}
+
+.toggle-leave {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.toggle-leave.toggle-leave-active {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease-out;
+}
+
 .checklist__task:first-child {
   margin-top: 10px;
   padding-top: 10px;
@@ -86,7 +108,7 @@ ul {
 }
 
 .checklist__task--remove:after{
-  display: 'inline-block';
+  display: inline-block;
   color: #d66;
   content: "✖";
 }
@@ -95,6 +117,6 @@ ul {
   border: 1px dashed #bbb;
   width: 100%;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 5px;
   border-radius: 3px;
 }

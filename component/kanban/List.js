@@ -3,6 +3,7 @@ import Card from './Card';
 
 class List extends Component {
     render() {
+        console.log(this.props.cards);
         let cards = this.props.cards.map((card) => {
             return <Card key={card.id}
                          id={card.id}
@@ -10,7 +11,7 @@ class List extends Component {
                          taskCallbacks={this.props.taskCallbacks}
                          description={card.description}
                          color={card.color}
-                         tasks={card.task} />;
+                         tasks={card.tasks} />;
         });
 
         return (
